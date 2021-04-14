@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="10dp"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="4dp"
+    android:padding="20dp"
+    android:clipChildren="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgCategory"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitStart"
+            android:src="@mipmap/ic_launcher"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <CheckBox
+                android:id="@+id/cbDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Bananas"
+                android:textSize="22sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12"
+                android:paddingHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="category"
+                    android:textSize="18sp" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_preview"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="12"
+                android:paddingHorizontal="5dp"
+                android:clipChildren="false">
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:text="@string/btn_delete"
+                    android:textColor="@android:color/holo_red_light"
+                    card_view:backgroundTint="@color/white"
+                    card_view:cornerRadius="1000dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    android:clipToPadding="false"/>
+
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_edit"
+                    android:textColor="@android:color/holo_green_light"
+                    card_view:backgroundTint="@android:color/white"
+                    card_view:cornerRadius="1000dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent"
+                    android:clipToPadding="false"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
